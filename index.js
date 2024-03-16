@@ -1,1 +1,35 @@
 // Your code here
+const dodger = document.getElementById('dodger');
+function moveDodgerLeft() {
+    
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
+
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`;
+  }
+}
+function moveDodgerRight() {
+    const dodger = document.getElementById('dodger');
+    const currentLeft = parseInt(dodger.style.left, 10);
+  
+    
+    const maxRight = window.innerWidth - dodger.offsetWidth; 
+  
+    
+    if (currentLeft < maxRight) {
+      dodger.style.left = `${currentLeft + 1}px`; 
+    }
+  }
+  
+    
+  
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      moveDodgerLeft();
+    }else if(e.key === "ArrowRight"){
+        moveDodgerRight()
+    }
+
+  });
+
