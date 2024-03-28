@@ -14,7 +14,7 @@ function moveDodgerRight() {
     const currentLeft = parseInt(dodger.style.left, 10);
   
     
-    const maxRight = window.innerWidth - dodger.offsetWidth; 
+    const maxRight = 360; 
   
     
     if (currentLeft < maxRight) {
